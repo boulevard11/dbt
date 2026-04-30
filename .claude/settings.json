@@ -1,11 +1,23 @@
 {
   "permissions": {
     "allow": [
-      "Bash(.claude/hooks/git-wrapper.sh*)"
+      "Bash(bash .claude/hooks/git-wrapper.sh*)",
+      "Bash(git status*)",
+      "Bash(git log*)",
+      "Bash(git diff*)",
+      "Bash(git branch*)",
+      "Bash(git show*)",
+      "Bash(git fetch*)",
+      "Bash(gh pr*)"
     ],
     "deny": [
-      "Bash(/usr/bin/git*)",
-      "Bash(git *)"
+      "Bash(git checkout*)",
+      "Bash(git push*)",
+      "Bash(git commit*)",
+      "Bash(git merge*)",
+      "Bash(git rebase*)",
+      "Bash(git reset*)",
+      "Bash(git revert*)"
     ]
   }
 }
