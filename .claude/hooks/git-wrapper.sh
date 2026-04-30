@@ -15,7 +15,7 @@ if [ "$SUBCOMMAND" = "checkout" ] && [ "$2" = "-b" ]; then
   CURRENT=$($GIT rev-parse --abbrev-ref HEAD)
 
  # 現在のブランチがfeature+任意の文字列であることを確認
-  if ! echo "$CURRENT" | grep -qE "^feature.+"; then
+  if ! echo "$CURRENT" | grep -qE "^feature"; then
     echo "ERROR: 現在のブランチが feature で始まっていません。"
     echo "       現在のブランチ: $CURRENT"
     echo "       featureブランチに切り替えてから作業してください。"
